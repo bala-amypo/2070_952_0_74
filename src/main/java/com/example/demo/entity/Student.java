@@ -1,10 +1,10 @@
 package com.example.demo.entity;
 import java.time.LocalDate;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 @Entity
 public class Student{
-    @id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
@@ -25,7 +25,7 @@ public class Student{
         this.name = name;
     }
     public String getDept(){
-        return id;
+        return dept;
     }
     public void setDept(String dept){
         this.dept = dept;
